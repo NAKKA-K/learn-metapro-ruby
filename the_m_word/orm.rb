@@ -4,7 +4,7 @@ class Entity
   def initialize(table, ident)
     @table = table
     @ident = ident
-    Database.sql "INSERT INTO #{@table} (id) VALUES (#{@ident)})"
+    Database.sql "INSERT INTO #{@table} (id) VALUES (#{@ident})"
   end
 
   def set(col, val)
@@ -23,6 +23,10 @@ class Movie < Entity
 
   def title
     get 'title'
+  end
+
+  def title=(value)
+    set 'title', value
   end
 
   def director
