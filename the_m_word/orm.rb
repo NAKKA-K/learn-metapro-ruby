@@ -16,6 +16,7 @@ class Entity
   end
 end
 
+# This is a so redundancy code
 class Movie < Entity
   def initialize(ident)
     super 'movies', ident
@@ -37,3 +38,7 @@ class Movie < Entity
     set 'director', value
   end
 end
+
+movie = Movie.new(1)
+movie.title = 'doctor' # use `def title=(value)` method
+movie.director = 'stanry' # use `def director=(value)` method
