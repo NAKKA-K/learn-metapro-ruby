@@ -2,6 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     awesome_print (1.8.0)
+    builder (3.2.3)
     coderay (1.0.9)
     concurrent-ruby (1.1.4)
     ethon (0.12.0)
@@ -43,6 +44,7 @@ PLATFORMS
 
 DEPENDENCIES
   awesome_print
+  builder
   ghee
   monetize
   pry (= 0.9.12.2)
