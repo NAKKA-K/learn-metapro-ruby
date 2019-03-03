@@ -21,9 +21,15 @@ class Computer
     return "* #{result}" if price >= 100
     result
   end
+
+  def respond_to_missing?(method, include_private = false)
+    @data_source.respond_to?("get_#{method}_info") || super
+  end
 end
 
 computer = Computer.new(0, DS.new)
+p computer.respond_to?("cpu") # => true
+p computer.respond_to?("pc") # => false
 p computer.cpu
 p computer.mouse
 p computer.pc
