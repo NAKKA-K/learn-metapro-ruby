@@ -46,6 +46,7 @@ DEPENDENCIES
   awesome_print
   builder
   ghee
+  highline
   monetize
   pry (= 0.9.12.2)
   rake
