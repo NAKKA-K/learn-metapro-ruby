@@ -6,6 +6,13 @@ end
 
 class MyClass
   include Greetings
+
+  def greet_with_enthusiasm
+    "Hey, #{greet_with_enthusiasm}!"
+  end
+
+  alias_method :greet_without_enthusiasm, :greet
+  alias_method :greet, :greet_with_enthusiasm
 end
 
 p MyClass.new.greet #=> "hello"
