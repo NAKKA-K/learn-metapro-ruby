@@ -16,3 +16,8 @@ task.save
 
 p task.description #=> "ガレージの掃除"
 p task.completed? #=> true
+
+
+my_query = "tasks.*, (description like %garage%) as heavy_job"
+task = Task.find(:first, :select => my_query)
+p task.heavy_job #=> true
